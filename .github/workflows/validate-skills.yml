@@ -5,12 +5,10 @@ on:
     branches: [main]
     paths:
       - "skills/**"
-      - ".claude-plugin/**"
       - "scripts/validate_skills.py"
   pull_request:
     paths:
       - "skills/**"
-      - ".claude-plugin/**"
       - "scripts/validate_skills.py"
 
 jobs:

@@ -1,6 +1,5 @@
-"""Validate every skills/*/SKILL.md and the plugin manifests."""
+"""Validate every skills/*/SKILL.md."""
 
-import json
 import re
 import sys
 from pathlib import Path
@@ -39,23 +38,12 @@ def validate_skills() -> list[str]:
     return errors
 
 
-def validate_manifests() -> list[str]:
-    errors: list[str] = []
-    for name in ("plugin.json", "marketplace.json"):
-        path: Path = ROOT / ".claude-plugin" / name
-        try:
-            json.loads(path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError) as exc:
-            errors.append(f".claude-plugin/{name}: {exc}")
-    return errors
-
-
 def main() -> int:
-    errors: list[str] = validate_skills() + validate_manifests()
+    errors: list[str] = validate_skills()
     for error in errors:
         print(f"ERROR: {error}")
     if not errors:
-        print("All skills and manifests are valid.")
+        print("All skills are valid.")
     return 1 if errors else 0
 
 
