@@ -56,4 +56,4 @@ Use judgment in both directions. When duplicated code expresses the same concept
 
 ## Git history
 
-Keep the main branch's history clean. Squash-merge a PR that has one commit, or whose commits have no value on their own. Use a merge commit only when the PR has several commits that each stand alone and make sense to keep seperate. Never add a merge commit that just wraps a single commit.
+Keep the main branch's history clean. Squash-merge a PR that has one commit, or whose commits have no value on their own. Use a merge commit only when the PR has several commits that each stand alone and make sense to keep separate. Never add a merge commit that just wraps a single commit.
