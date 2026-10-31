@@ -53,3 +53,7 @@ Use judgment in both directions. When duplicated code expresses the same concept
 - Fail loudly and early with specific, actionable messages. Do not swallow errors or return silent defaults that hide a problem.
 - Handle errors at the layer that can do something about them, and let them propagate otherwise.
 - Keep configuration and secrets out of scattered code; centralize configuration and read it in one place.
+
+## Git history
+
+Keep the main branch's history clean. Squash-merge a PR that has one commit, or whose commits have no value on their own. Use a merge commit only when the PR has several commits that each stand alone and make sense to keep seperate. Never add a merge commit that just wraps a single commit.
