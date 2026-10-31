@@ -1,0 +1,13 @@
+{
+  "name": "joniba-skills-toolkit",
+  "owner": {
+    "name": "Joniba1"
+  },
+  "plugins": [
+    {
+      "name": "toolkit",
+      "source": "./",
+      "description": "Personal Claude Code skills: engineering standards and university calendar setup."
+    }
+  ]
+}
