@@ -15,10 +15,10 @@ In Claude Code:
 
 ```
 /plugin marketplace add Joniba1/agent-skills
-/plugin install toolkit@joniba-skills-toolkit
+/plugin install toolkit@joniba-skills
 ```
 
-Then open `/plugin` > Marketplaces > `joniba-skills-toolkit` and enable auto-update.
+Then open `/plugin` > Marketplaces > `joniba-skills` and enable auto-update.
 
 ## Getting updates
 
@@ -26,7 +26,7 @@ Pushing to `main` does not touch your machines; Claude Code fetches the repo its
 With auto-update on, it picks up changes at startup. To pull immediately:
 
 ```
-/plugin marketplace update joniba-skills-toolkit
+/plugin marketplace update joniba-skills
 /reload-plugins
 ```
 
