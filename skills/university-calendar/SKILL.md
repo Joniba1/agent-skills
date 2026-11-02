@@ -5,7 +5,7 @@ description: Create or update Google Calendar events for the user's university s
 
 # University calendar events
 
-The user studies at the Open University of Israel and keeps every course meeting and assignment deadline in Google Calendar. Every semester they repeat the same setup for new courses, so this skill makes the result identical each time: same titles, same descriptions, one color per course. Reply to the user in Hebrew.
+The user studies at the Open University of Israel and keeps every course meeting and assignment deadline in Google Calendar. Every semester they repeat the same setup for new courses, so this skill makes the result identical each time: same titles, same descriptions, one color per course.
 
 ## Scope
 
@@ -35,7 +35,7 @@ For every request about a course, however small (adding one assignment, fixing a
 
 ## 2. Collect the inputs
 
-After the lookup, ask for everything that is still missing in one Hebrew message, before building anything. Do not ask for what the lookup already gave you, and do not fill gaps from memory or from earlier semesters. The user usually answers with screenshots of Opal pages, which is fine, but read them carefully.
+After the lookup, ask for everything that is still missing in one message, before building anything. Do not ask for what the lookup already gave you, and do not fill gaps from memory or from earlier semesters. The user usually answers with screenshots of Opal pages, which is fine, but read them carefully.
 
 For each course:
 
@@ -55,7 +55,7 @@ Ask, never decide silently, about these (every semester, naming the specific ass
 - Opal dates are DD/MM/YYYY. If two screenshots disagree, use the newer one and tell the user.
 - Due dates often fall on Saturday. That is normal for this university, not an error.
 - Course color: reuse the one found in step 1. For a new course, first list the semester's events to see which colors the other courses use, then pick per the Colors section.
-- For bulk work (more than about 3 events), first write out the full plan in Hebrew: every event with its title, date(s) and color name, plus the open questions above. Wait for approval. For a single event, just do it and report.
+- For bulk work (more than about 3 events), first write out the full plan: every event with its title, date(s) and color name, plus the open questions above. Wait for approval. For a single event, just do it and report.
 
 ## 4. Event format
 
@@ -117,24 +117,24 @@ For two courses of the same subject, use a neighboring color.
 
 Google Calendar `colorId`s (pass the number in `colorId`):
 
-| colorId | Name | Looks like |
-|---|---|---|
-| 1 | Lavender | light purple |
-| 2 | Sage | light green |
-| 3 | Grape | purple |
-| 4 | Flamingo | pink |
-| 5 | Banana | yellow |
-| 6 | Tangerine | orange |
-| 7 | Peacock | teal-blue |
-| 8 | Graphite | gray |
-| 9 | Blueberry | deep blue |
-| 10 | Basil | dark green |
-| 11 | Tomato | red |
+| colorId | Name      | Looks like   |
+| ------- | --------- | ------------ |
+| 1       | Lavender  | light purple |
+| 2       | Sage      | light green  |
+| 3       | Grape     | purple       |
+| 4       | Flamingo  | pink         |
+| 5       | Banana    | yellow       |
+| 6       | Tangerine | orange       |
+| 7       | Peacock   | teal-blue    |
+| 8       | Graphite  | gray         |
+| 9       | Blueberry | deep blue    |
+| 10      | Basil     | dark green   |
+| 11      | Tomato    | red          |
 
 ## 5. After writing
 
 - **Verify** with `list_events` over the semester's range (filter by the course number): count, dates, titles, colors, and that the description has the link alone on its own line. Fix mismatches before reporting.
-- **Report** in Hebrew, briefly: what was created or updated per course, what was skipped and why, any choice you made that the user did not specify, and conflicts you noticed (a meeting overlapping another calendar event, due dates of two courses on the same day). Do not recap the steps.
+- **Report**, briefly: what was created or updated per course, what was skipped and why, any choice you made that the user did not specify, and conflicts you noticed (a meeting overlapping another calendar event, due dates of two courses on the same day). Do not recap the steps.
 
 ## Updating existing events
 
